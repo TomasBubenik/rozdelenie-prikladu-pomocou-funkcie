@@ -1,0 +1,16 @@
+def rozbit():
+    x = "10+5-4"
+    nums = []
+    znamienka = []
+    last_index = 0
+    
+    for i,c in enumerate(x):
+        if c == "+" or c == "-":
+            nums.append(x[1+last_index:i])
+            znamienka.append(c)
+            last_index = i
+    
+    
+    nums.append(x[1+last_index:])
+    return nums,znamienka
+print (rozbit())
